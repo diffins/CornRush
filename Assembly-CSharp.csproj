@@ -73,6 +73,8 @@
     <Compile Include="Assets\Scripts\Global\Finish.cs" />
     <Compile Include="Assets\Scripts\Global\GameManager.cs" />
     <Compile Include="Assets\Scripts\Global\GameSettings.cs" />
+    <Compile Include="Assets\Scripts\Global\InputHandle.cs" />
+    <Compile Include="Assets\Scripts\Global\SwipeContainer.cs" />
     <Compile Include="Assets\Scripts\Global\UiManager.cs" />
     <Compile Include="Assets\Scripts\Obstacle\ObstacleSpawner.cs" />
     <Compile Include="Assets\Scripts\Obstacle\PoolElement.cs" />

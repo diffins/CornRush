@@ -19,5 +19,6 @@ MonoBehaviour:
   _jumpPower: 0.8
   _offsetPower: 0.8
   _cornForwardSpeed: 0.8
-  _pressTime: 0.2
+  _swipeAreaMaxWidth: 0.8
+  _timeToMaxSwipeAreaWidth: 0.4
   _isWallsAreHot: 1

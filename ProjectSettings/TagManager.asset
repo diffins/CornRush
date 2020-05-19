@@ -8,6 +8,7 @@ TagManager:
   - Corn
   - Hot
   - Wall
+  - SwipeArea
   layers:
   - Default
   - TransparentFX

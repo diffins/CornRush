@@ -12,11 +12,13 @@ ScriptsOnlyBuild:
     - GameManager
     - GameSettings
     - InfinityRoad
+    - InputHandle
     - ObstacleSpawner
     - PoolElement
     - RandomSide
     - RearrangerRoad
     - Rotator
+    - SwipeContainer
     - UiManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -105,45 +107,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12104}
     - Class: 114
-      Script: {instanceID: 12130}
+      Script: {instanceID: 12124}
     - Class: 114
-      Script: {instanceID: 12190}
+      Script: {instanceID: 12132}
     - Class: 114
       Script: {instanceID: 12192}
     - Class: 114
-      Script: {instanceID: 12220}
+      Script: {instanceID: 12194}
     - Class: 114
-      Script: {instanceID: 12416}
+      Script: {instanceID: 12222}
     - Class: 114
-      Script: {instanceID: 12456}
+      Script: {instanceID: 12418}
     - Class: 114
-      Script: {instanceID: 12490}
+      Script: {instanceID: 12458}
     - Class: 114
-      Script: {instanceID: 12530}
+      Script: {instanceID: 12492}
     - Class: 114
-      Script: {instanceID: 12646}
+      Script: {instanceID: 12532}
     - Class: 114
-      Script: {instanceID: 12712}
+      Script: {instanceID: 12648}
     - Class: 114
-      Script: {instanceID: 12726}
+      Script: {instanceID: 12714}
     - Class: 114
-      Script: {instanceID: 12820}
+      Script: {instanceID: 12728}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 12822}
     - Class: 114
-      Script: {instanceID: 12970}
+      Script: {instanceID: 12910}
     - Class: 114
-      Script: {instanceID: 13038}
+      Script: {instanceID: 12972}
     - Class: 114
-      Script: {instanceID: 13056}
+      Script: {instanceID: 13040}
     - Class: 114
-      Script: {instanceID: 13120}
+      Script: {instanceID: 13058}
     - Class: 114
-      Script: {instanceID: 13154}
+      Script: {instanceID: 13122}
     - Class: 114
-      Script: {instanceID: 13274}
+      Script: {instanceID: 13156}
     - Class: 114
-      Script: {instanceID: 13326}
+      Script: {instanceID: 13276}
+    - Class: 114
+      Script: {instanceID: 13328}
+    - Class: 114
+      Script: {instanceID: 33666}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -271,7 +277,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: e8c770c8cfd796b62c39fb3ae30c8d27
+      Hash: a188f06a48684929fa3de6fab822ae92
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameSettings
@@ -365,6 +371,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 2829b722126d5093bfc30b607ec3b254
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InputHandle
   - hash:
       serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
@@ -689,7 +701,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SwipeContainer
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/diffins/Desktop/BuildCorn/CornRush.apk
+  playerPath: C:/Users/diffins/Desktop/PCR2/PCR2.apk

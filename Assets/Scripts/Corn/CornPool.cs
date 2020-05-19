@@ -17,6 +17,7 @@ public class CornPool : MonoBehaviour
     private List<GameObject> _cornActive = new List<GameObject>();
     private List<GameObject> _cornDisable = new List<GameObject>();
 
+
     private void Start()
     {
         foreach (Transform corn in transform)

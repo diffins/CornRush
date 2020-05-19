@@ -66,13 +66,31 @@ public class GameSettings : ScriptableObject
         protected set { }
     }
 
-    [Tooltip("Время в секундах после которого нажатие считается долгим")]
-    [SerializeField] private float _pressTime;
-    public float PressTime
+    [Tooltip("Максимальная ширина до которой будет увеличиваться зона влияния свайпа")]
+    [Range(0, 1)]
+    [SerializeField] private float _swipeAreaMaxWidth;
+    public float SwipeAreaMaxWidth
     {
-        get { return _pressTime; }
+        get { return _swipeAreaMaxWidth; }
         protected set { }
     }
+
+    [Tooltip("Время в секундах для полного увеличения зоны свайпа")]
+    [SerializeField] private float _timeToMaxSwipeAreaWidth;
+    public float TimeToMaxSwipeAreaWidth
+    {
+        get { return _timeToMaxSwipeAreaWidth; }
+        protected set { }
+    }
+
+    //[Tooltip("Время в секундах после которого нажатие считается долгим")]
+    //[SerializeField] private float _pressTime;
+    //public float PressTime
+    //{
+    //    get { return _pressTime; }
+    //    protected set { }
+    //}
+
 
     [Tooltip("Нагреваются ли зёрна от боковых стенок")]
     [SerializeField] private bool _isWallsAreHot;
