@@ -17,7 +17,8 @@ public class InfinityRoad : MonoBehaviour
 
     public void RearrangeRoadElement()
     {
-        Vector3 newPosition = _lastElementPosition - new Vector3(_step, 0, 0);
+        
+        Vector3 newPosition = _lastElementPosition - new Vector3(_step, 0, 0) - new Vector3(Random.Range(5, 15),0,0);
         _roadElements[0].transform.position = newPosition;
         _lastElementPosition = newPosition;
 

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timeToBlowUp: 2
   _levelDuration: 60
-  _obstacleDensity: 0.8
+  _obstacleDensity: 0.601
   _blowPower: 0.8
   _jumpPower: 0.8
   _offsetPower: 0.8
   _cornForwardSpeed: 0.8
   _pressTime: 0.2
-  _isWallsAreHot: 1
+  _isWallsAreHot: 0

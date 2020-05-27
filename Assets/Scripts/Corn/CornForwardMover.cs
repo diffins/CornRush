@@ -20,7 +20,7 @@ public class CornForwardMover : MonoBehaviour
         if (_groundChecker.IsOnGround)
             _rigidBody.AddTorque(Vector3.forward * GameManager.Instance.Settings.CornForwardSpeed, ForceMode.Impulse);
         else
-            _rigidBody.AddTorque(Vector3.forward * GameManager.Instance.Settings.CornForwardSpeed * .5f, ForceMode.Impulse);
+            _rigidBody.AddTorque(Vector3.forward * GameManager.Instance.Settings.CornForwardSpeed * .2f, ForceMode.Impulse);
             
     }
 

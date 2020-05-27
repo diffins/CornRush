@@ -14,9 +14,7 @@ ScriptsOnlyBuild:
     - InfinityRoad
     - ObstacleSpawner
     - PoolElement
-    - RandomSide
     - RearrangerRoad
-    - Rotator
     - UiManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -43,7 +41,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -91,13 +91,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11584}
     - Class: 114
-      Script: {instanceID: 11616}
-    - Class: 114
       Script: {instanceID: 11628}
+    - Class: 114
+      Script: {instanceID: 11678}
     - Class: 114
       Script: {instanceID: 11718}
     - Class: 114
       Script: {instanceID: 11770}
+    - Class: 114
+      Script: {instanceID: 11772}
     - Class: 114
       Script: {instanceID: 11856}
     - Class: 114
@@ -106,8 +108,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12104}
     - Class: 114
       Script: {instanceID: 12130}
-    - Class: 114
-      Script: {instanceID: 12190}
     - Class: 114
       Script: {instanceID: 12192}
     - Class: 114
@@ -149,8 +149,6 @@ ScriptsOnlyBuild:
     - Class: 128
       Script: {instanceID: 0}
     - Class: 135
-      Script: {instanceID: 0}
-    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -692,4 +690,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/diffins/Desktop/BuildCorn/CornRush.apk
+  playerPath: C:/Users/diffins/Desktop/PCR3.apk

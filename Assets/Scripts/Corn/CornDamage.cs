@@ -10,11 +10,14 @@ public class CornDamage : MonoBehaviour
     public event Action OnStartCooling;
     public event Action OnAchieveMaxHeat;
 
-    private float _contactTime;
+    private float _heatingTime;
     private bool _isHeating;
+    private bool _isOnFloor;
     private string _hotObstacleTag = "Hot";
+    private string _floorTag = "Floor";
     private string _wallTag = "Wall";
-    private float _coolingScaler = 0.3f;
+    private float _coolingScaler = 0.6f;
+    private float _airHeatingScaler = .8f;
 
     private MeshRenderer _meshRenderer;
     private Color _defaultColor;
@@ -29,22 +32,29 @@ public class CornDamage : MonoBehaviour
     private void Update()
     {
 
-        if(_contactTime >= GameManager.Instance.Settings.TimeToBlowUp)
+        if(_heatingTime >= GameManager.Instance.Settings.TimeToBlowUp)
         {
             OnAchieveMaxHeat?.Invoke();
         }
 
-        if(_isHeating)
+        if(!_isOnFloor)
         {
-            _contactTime += Time.deltaTime;
+            _heatingTime += Time.deltaTime * _airHeatingScaler;
+            Debug.Log("Heating");
             ChangeColor();
         }
-        else if(_contactTime != 0)
-        {
-            _contactTime -= Time.deltaTime * _coolingScaler;
 
-            if (_contactTime < 0)
-                _contactTime = 0;
+        if(_isHeating)
+        {
+            _heatingTime += Time.deltaTime;
+            ChangeColor();
+        }
+        else if(_heatingTime != 0)
+        {
+            _heatingTime -= Time.deltaTime * _coolingScaler;
+
+            if (_heatingTime < 0)
+                _heatingTime = 0;
 
             ChangeColor();
         }
@@ -52,7 +62,7 @@ public class CornDamage : MonoBehaviour
 
     private void ChangeColor()
     {
-        float colorDelta = _contactTime / GameManager.Instance.Settings.TimeToBlowUp;
+        float colorDelta = _heatingTime / GameManager.Instance.Settings.TimeToBlowUp;
         _meshRenderer.material.color = Color.Lerp(_defaultColor, _maxHeatColor, colorDelta);
     }
 
@@ -63,6 +73,11 @@ public class CornDamage : MonoBehaviour
             _isHeating = true;
             OnStartHeating?.Invoke();
         }
+
+        if(collision.gameObject.tag == _floorTag)
+        {
+            _isOnFloor = true;
+        }
     }
 
     private void OnCollisionExit(Collision collision)
@@ -71,6 +86,11 @@ public class CornDamage : MonoBehaviour
         {
             _isHeating = false;
             OnStartCooling?.Invoke();
+        }
+
+        if (collision.gameObject.tag == _floorTag)
+        {
+            _isOnFloor = false;
         }
     }
 
